@@ -1,8 +1,9 @@
 # API Clone Airbnb
 
-##Iván Daniel Avila Campos
+### Iván Daniel Avila Campos
 
-# Rutas
+--- 
+# Routes
 
 - /api/v1/users
 - /api/v1/users/:id
