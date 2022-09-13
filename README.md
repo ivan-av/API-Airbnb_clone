@@ -39,10 +39,6 @@
     - PATCH
 
 # Paths of my user a through my application
-
-[✅] Register my user
-[✅] Log my user
-
 ### User not logged in
 
 1. See the places
