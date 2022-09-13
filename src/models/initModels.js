@@ -1,18 +1,36 @@
-const Users = require('./user.model')
-const Roles = require('./roles.model')
-const Reservations = require('./reservations.model')
-const Accomodations = require('./accomodations.model')
-
+const Accommodation_images = require("./accommodation_images.model");
+const Accommodations = require("./accommodations.model");
+const Places = require("./places.model");
+const Reservations = require("./reservations.model");
+const Users = require("./user.model");
+const Users_images = require("./users_images.model");
+const Roles = require("./roles.model");
 
 const initModels = () => {
-    //? Users -> Posts
-    Users.hasOne(Roles)
-    Roles.belongsToMany(Users)
-    
+
+    //? Users <- Roles
+    Roles.hasMany(Users);
+    Users.belongsTo(Roles);
+
+    //? Users -> Users_images
+    Users_images.belongsTo(Users);
+    Users.hasMany(Users_images);
+
     //? Users <-> Accomodations
-    Users.belongsToMany(Accomodations, { through: Reservations })
-    Accomodations.belongsToMany(Users, { through: Reservations })
+    Users.belongsToMany(Accommodations, { through: Reservations, });
+    Accommodations.belongsToMany(Users, { through: Reservations, });
 
-}
+    //? Accomodations -> Acommodation_images
+    Accommodation_images.belongsTo(Accommodations);
+    Accommodations.hasMany(Accommodation_images);
 
-module.exports = initModels
+    //? 
+    Accommodations.belongsTo(Places);
+    Places.hasMany(Accommodations);
+
+    //? User -> Acommodations (Host)
+    Users.hasMany(Accommodations)
+    Accommodations.belongsTo(Users)
+};
+
+module.exports = initModels;

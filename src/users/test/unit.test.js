@@ -18,7 +18,7 @@ describe('Test Unitario de mis usuarios', () => {
         const data = usersControllers.createUser(body)
 
         assert.equal(data.first_name, body.first_name)
-        assert.equal(data.rol,'normal')
+        assert.equal(data.rol, 'normal')
         assert.notEqual(data.password, body.password)
         assert.equal(data.profile_image, '')
         done()
@@ -38,7 +38,7 @@ describe('Test Unitario de mis usuarios', () => {
         const data = usersControllers.createUser(body)
 
         assert.equal(data.first_name, body.first_name)
-        assert.equal(data.rol,'normal')
+        assert.equal(data.rol, 'normal')
         assert.notEqual(data.password, body.password)
         assert.equal(data.profile_image, 'asd')
         assert.typeOf(data.id, 'string')
@@ -56,7 +56,7 @@ describe('Test Unitario de mis usuarios', () => {
         assert.property(data, 'last_name')
         assert.equal(data.rol, 'admin')
         assert.equal(data.email, 'sahid.kick@academlo.com')
-        assert.equal(data.first_name, 'Sahid') 
+        assert.equal(data.first_name, 'Sahid')
         assert.property(data, 'is_active')
         assert.equal(data.is_active, true)
         assert.typeOf(data.is_active, 'boolean')
@@ -75,5 +75,4 @@ describe('Test Unitario de mis usuarios', () => {
 
 
 })
-
 
