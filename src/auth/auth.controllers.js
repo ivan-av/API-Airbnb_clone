@@ -13,8 +13,8 @@ const loginUser = async (email, password) => {
     } catch (error) {
         return false
     }
-    //? user.password Contraseña hasheada
-    //* password Contraseña en texto plano
+    //? user.password -> Hashed password
+    //* password -> Password in plane text
 };
 
 

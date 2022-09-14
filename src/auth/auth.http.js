@@ -22,7 +22,7 @@ const login = (req, res) => {
                 );
                 return res
                     .status(200)
-                    .json({ message: "Tus credenciales son correctas", token });
+                    .json({ message: "Your credentials are correct", token });
             } else {
                 return res.status(401).json({ message: "Invalid Credentials" });
             }

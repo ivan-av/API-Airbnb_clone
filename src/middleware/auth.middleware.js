@@ -7,7 +7,7 @@ const {getUserById} = require('../users/users.controllers')
 module.exports = (passport) => {
   const opts = {
     jwtFromRequest: ExtractJwt.fromAuthHeaderWithScheme("jwt"),
-    secretOrKey: "academlo", // debe estar en una variable de entorno
+    secretOrKey: "academlo",
   };
   passport.use(
     new JwtStrategy(opts, async (decoded, done) => {
