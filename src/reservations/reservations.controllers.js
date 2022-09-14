@@ -1,8 +1,20 @@
-const uuid = require('uuid')
-const Reservation = require('../models/reservations.model')
+const uuid = require('uuid');
+const Reservation = require('../models/reservations.model');
+const Users = require('../models/user.model')
+const Accommodations = require('../models/accommodations.model')
 
 const getAllReservations = async () => {
-
+    const data = await Reservation.findAll({
+        include: [
+            {
+                model: Users
+            },
+            {
+                model: Accommodations
+            }
+        ]
+    })
+    return data
 }
 
 const createReservation = async (data, userId, accommodationId) => {
@@ -18,5 +30,6 @@ const createReservation = async (data, userId, accommodationId) => {
 
 
 module.exports = {
-    createReservation
+    createReservation,
+    getAllReservations
 }

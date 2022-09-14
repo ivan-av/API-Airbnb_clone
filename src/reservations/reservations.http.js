@@ -14,7 +14,17 @@ const postReservation = (req, res) => {
         })
 }
 
+const getAll = (req, res) => {
+    reservationControllers.getAllReservations()
+        .then(response => {
+            res.status(200).json(response)
+        })
+        .catch(err => {
+            res.status(400).json({ message: err.message })
+        })
+}
 
 module.exports = {
-    postReservation
+    postReservation,
+    getAll
 }

@@ -2,7 +2,7 @@ const router = require('express').Router()
 const passport = require('passport')
 
 const accommodationServices = require('./accommodations.http')
-const reservationServices = require('../reservations/reservation.http')
+const reservationServices = require('../reservations/reservations.http')
 require('../middleware/auth.middleware')(passport)
 
 router.route('/')
