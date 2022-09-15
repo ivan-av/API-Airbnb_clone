@@ -1,4 +1,4 @@
-# Deploy: 
+# Deploy: https://api-airbnb-clone.onrender.com/
 
 # API Clone Airbnb
 
@@ -39,6 +39,9 @@
 - /api/v1/auth/password-recovery
     - POST 
     - PATCH
+
+ - /v1/doc/
+    - Documentation
 
 # Paths of my user a through my application
 ### User not logged in
