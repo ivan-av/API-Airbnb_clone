@@ -1,4 +1,4 @@
-# Deploy: https://api-airbnb-clone.onrender.com/
+### Deploy: https://api-airbnb-clone.onrender.com/
 
 # API Clone Airbnb
 
@@ -41,7 +41,7 @@
     - PATCH
 
  - /v1/doc/
-    - Documentation
+    - Documentation: https://api-airbnb-clone.onrender.com/v1/doc/
 
 # Paths of my user a through my application
 ### User not logged in
