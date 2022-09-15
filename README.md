@@ -43,7 +43,7 @@
  - /v1/doc/
     - Documentation: https://api-airbnb-clone.onrender.com/v1/doc/
 
-# Paths of my user a through my application
+# Paths of my user through my application
 ### User not logged in
 
 1. See the places
